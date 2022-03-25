@@ -1,0 +1,210 @@
+div.Level-4,
+div.Level-5 {
+    border: 1px solid black;
+}
+
+
+/* ----------------------------------------------------------------- 
+    Apriso; html, head, body 부분 발췌
+----------------------------------------------------------------- */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+head {
+    display: none;
+}
+
+html,
+body {
+    font-size: 100%;
+}
+
+element.style {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------------------------------------------------------- 
+    화면 모양 구성
+----------------------------------------------------------------- */
+div.Layer:not(Canvas) {
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.1rem;
+}
+
+/* 객체 제어 입력칸 사이즈 */
+div.Layer.Level-5.StyleProperties input,
+div.Layer.Level-5.ConnectorProperties input {
+    font-size: 1.1rem;
+    width: 50%;
+}
+
+div.Layer.Level-2,
+div.Layer.Level-3,
+div.Layer.Level-4,
+div.Layer.Level-5 {
+    display: flex;
+}
+
+
+div.Layer.Level-4.ButtonList>div.Layer.Menu>div {
+    padding: 0 1rem 0 1rem;
+}
+
+div.Layer.Level-4.ButtonList>div.Layer.Menu>div:hover {
+    background-color: #b7472a;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* 객체제어 버튼 잠금 - 선택해야 풀리게 해야함 */
+/*
+div.Layer.Level-4.ButtonList > div.Layer.Menu > .ObjectControl
+{
+    pointer-events: none;
+    opacity: 0.4;
+}
+*/
+
+div.Layer.Level-3.MiddleArea>.LeftSide button:hover {
+    border: 2px solid #008CBA
+}
+
+
+div button>img {
+    /*width: 100%;
+    height: 100%;*/
+    width: 2rem;
+    height: 2rem;
+}
+
+
+/* ----------------------------------------------------------------- 
+    Flex Layout 배치 : column 수직배치, row 수평배치
+----------------------------------------------------------------- */
+div.Layer.Level-2.View {
+    flex-direction: column;
+}
+
+div.Layer.Level-3.TopArea {
+    flex-direction: column;
+}
+
+
+div.Layer.Level-3.MiddleArea {
+    flex-direction: row;
+}
+
+div.Layer.Level-3.MiddleArea>.LeftSide {
+    flex-direction: column;
+}
+
+
+div.Layer.Level-4.ButtonList {
+    flex-direction: column;
+}
+
+div.Layer.Level-4.ButtonList>div.Layer.Menu {
+    flex-direction: row;
+}
+
+
+/* ----------------------------------------------------------------- 
+    Flex 비율 조정
+----------------------------------------------------------------- */
+div.Layer.Level-3.TopArea {
+    flex: 0;
+}
+
+div.Layer.Level-3.MiddleArea {
+    flex: 1;
+}
+
+div.Layer.Level-3.MiddleArea>.LeftSide {
+    flex: 0;
+}
+
+div.Layer.Level-3.MiddleArea>.RightSide {
+    flex: 1;
+}
+
+
+/*
+div.Layer.Level-4.InputOption > .StyleProperties
+{
+    flex: 4;
+}
+div.Layer.Level-4.InputOption > .ConnectorProperties
+{
+    flex: 1;
+}
+div.Layer.Level-4.InputOption > .SaveProperties
+{
+    flex: 0;
+}
+*/
+
+
+div.Layer.StyleProperties .Column {
+    width: 100%;
+}
+
+div.Layer.StyleProperties .Column>div {
+    width: 100%;
+}
+
+div.Layer.StyleProperties .Column>div>span {
+    display: inline-flex;
+    flex: 0.5;
+    justify-content: right;
+}
+
+div.Layer.StyleProperties .Column>div>input {
+    display: inline-flex;
+    flex: 1;
+}
+
+div.Layer.StyleProperties .Column>div {
+    display: inline-flex;
+}
+
+
+div.Layer.ConnectorProperties .Column {
+    width: 100%;
+}
+
+div.Layer.ConnectorProperties .Column>div {
+    width: 100%;
+}
+
+div.Layer.ConnectorProperties .Column>div>span {
+    display: inline-flex;
+    flex: 0.4;
+    justify-content: right;
+}
+
+div.Layer.ConnectorProperties .Column>div>input {
+    display: inline-flex;
+    flex: 1;
+}
+
+div.Layer.ConnectorProperties .Column>div {
+    display: inline-flex;
+}
